@@ -76,7 +76,7 @@ SOFTWARE.
 If you wish to support the development of SysMVC, consider making a donation via PayPal to:
 
 <h2 class="mt-4">Donations via PAYPAL</h2>
-<p>If you wish to support the development of SysMVC, consider making a donation via PAYPAL to <a href="https://www.paypal.com/donate/?business=marcocosta@gmx.com&currency_code=USD"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate via PayPal"></a></p>
+<p>If you wish to support the development of SysMVC, consider making a donation via PAYPAL to <a href="https://www.paypal.com/donate/?business=marcocosta@gmx.com&currency_code=USD" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate via PayPal"></a></p>
 
 </div>
 @endsection
