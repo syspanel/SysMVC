@@ -77,36 +77,37 @@ class CrudExampleController extends BaseController
     }
 
     public function store()
-    {
-        try {
-            $data = $_POST;
+{
+    try {
+        $data = $_POST;
 
-            if (!isset($data['csrf_token']) || !$this->validateCsrfToken($data['csrf_token'])) {
-                throw new \Exception('Invalid CSRF token.');
-            }
+        if (!isset($data['csrf_token']) || !$this->validateCsrfToken($data['csrf_token'])) {
+            throw new \Exception('Invalid CSRF token.');
+        }
 
-            $data = Sanitizer::sanitizeInput($data);
+        $data = Sanitizer::sanitizeInput($data);
 
-            if (!isset($data['password']) || empty($data['password'])) {
-                throw new \Exception('The "password" field is required.');
-            }
+        if (!isset($data['password']) || empty($data['password'])) {
+            throw new \Exception('The "password" field is required.');
+        }
 
-            $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
+        $data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
 
-            CrudExample::create($data);
+        CrudExample::create($data);
 
-            header('Location: /crudexample');
-            exit;
-        } catch (\Exception $e) {
-            if ($e->getCode() == 23000) { // Error code for duplicate
-                $this->logger->error('Error when creating record: Duplicate email.');
-                return $this->blade->run('crudexample.create', ['error' => 'This email already exists.']);
-            } else {
-                $this->logger->error('Error when creating record: ' . $e->getMessage());
-                echo 'Error when creating record: ' . $e->getMessage();
-            }
+        header('Location: /crudexample');
+        exit;
+    } catch (\Exception $e) {
+        if ($e->getCode() == 23000) { // Error code for duplicate
+            $this->logger->error('Error when creating record: Duplicate email.');
+            return $this->blade->run('crudexample.create', ['error' => 'This email already exists.']);
+        } else {
+            $this->logger->error('Error when creating record: ' . $e->getMessage());
+            // Evite echo aqui, retorne a saída
+            return $this->blade->run('crudexample.create', ['error' => $e->getMessage()]);
         }
     }
+}
 
     public function update($id)
     {
