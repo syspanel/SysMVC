@@ -406,4 +406,4 @@ function strStartsWith($haystack, $needles) {
     return false;
 }
 
-?>
+
