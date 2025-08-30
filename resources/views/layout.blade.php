@@ -54,7 +54,7 @@
     </div>
 
     <footer class="bg-dark text-white text-center p-3">
-        <p>© 2025 SysMVC PHP Framework | <a href="https://opensource.org/licenses/MIT" class="text-white" target="_blank">License: MIT</a></p>
+        <p>© 2025 SysMVC 1.0 PHP Framework | <a href="https://opensource.org/licenses/MIT" class="text-white" target="_blank">License: MIT</a></p>
     </footer>
 
     <!-- Bootstrap Scripts -->
