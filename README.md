@@ -1,7 +1,7 @@
 # SysMVC
 
 ## 📌 Project Information
-**SysMVC** is a system developed by **Marco Costa** (**marcocosta@gmx.com**), with source code licensed under the **MIT License**.
+**SysMVC** is a system developed by **Marco Costa** (**sysmvc@syspanel.com.br**), with source code licensed under the **MIT License**.
 
 This software is offered for free and can be used, modified, and distributed under the terms of the MIT License.
 
@@ -142,7 +142,7 @@ You can use, copy, modify, merge, publish, distribute, sublicense, or sell copie
 
 The Software is provided "as is", without warranties of any kind. For more details, see the MIT License.
 
-For more information, contact: marcocosta@gmx.com
+For more information, contact: sysmvc@syspanel.com.br
 
 ### Support the Project
 If you find this project useful, consider supporting its development with a donation via PayPal:
